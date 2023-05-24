@@ -32,8 +32,8 @@ Se realizon las siguientes actividades:
 + Importación de librerías: Se importan las librerías necesarias para el análisis de datos, incluyendo pandas, numpy, datetime, missingno, seaborn y matplotlib.pyplot.
 + Carga de datos: Se carga el archivo 'accidentes_etl.csv' en un DataFrame llamado 'df'.
 + Análisis de los datos:
-    - a) Diccionario de datos: Se muestra el diccionario de datos que describe el significado de cada columna en el DataFrame.
-    - b) Colecta y validación de datos:
+    a) Diccionario de datos: Se muestra el diccionario de datos que describe el significado de cada columna en el DataFrame.
+    b) Colecta y validación de datos:
         - Tipo de dato de las variables: Se muestra el tipo de dato de cada columna en el DataFrame.
         - Cantidad de variables, según cada tipo de dato: Se cuenta la cantidad de variables por cada tipo de dato.
         - Cantidad de variables y observaciones: Se muestra la cantidad de variables y observaciones en el DataFrame.
@@ -45,7 +45,7 @@ Se realizon las siguientes actividades:
         - Eliminamos los valores nulos: Se eliminan las columnas 'Unnamed: 0' y 'flight_no' del DataFrame debido a su alto porcentaje de valores nulos.
         - Cantidad de filas duplicadas: Se cuenta la cantidad de filas duplicadas en el DataFrame.
         - Joineando dataset: Se cargan dos tablas adicionales ('ac_type_clasificacion.csv' y 'Ruta_lon_lat_pais_cont.csv') y se unen con el DataFrame original ('df') utilizando las columnas 'ac_type' y 'Ruta' respectivamente.
-    - c) Análisis general:
+    c) Análisis general:
         - Análisis univariado de variables numéricas: Se muestra un histograma y un diagrama de caja para cada variable numérica en el DataFrame.
         - Análisis univariado de variables categóricas: Se muestra un gráfico de barras para cada variable categórica en el DataFrame.
         - Visualización de palabras clave en la columna 'summary': Se muestra una nube de palabras que representa las palabras más frecuentes en la columna 'summary'.
@@ -53,14 +53,14 @@ Se realizon las siguientes actividades:
 
 Cabe mencionar que el archivo adjunto en el link proporcionado contiene comentarios que explica cada sección y actividad realizada paso a paso.
 
-## **[Streamlit](https://lionelmc-pi-da-app-k5zaj6.streamlit.app/KPI)**
+## **[Streamlit](https://lionelmc-pi-da-app-k5zaj6.streamlit.app/KPI)**  ( <== Dar click al enlace)
 + **[Visualizaciones:](https://github.com/LionelMc/PI_DA/blob/main/pages/01_%E2%9C%88%EF%B8%8F_Visualizacion.py)**
 Los cambios desarrollados son los siguientes:
 
     - Se importaron las bibliotecas necesarias: pandas, numpy, datetime, missingno, seaborn, matplotlib.pyplot, folium y streamlit_folium.
     - Se cargó el DataFrame desde el archivo "accidentes_data.csv".
     - Se añadió una sección para mostrar los datos del DataFrame. Se implementó una interfaz en Streamlit con botones para mostrar el encabezado, una muestra, la cola y la totalidad de los datos.
-    -Se realizó un análisis de la cantidad de accidentes por año. Se convirtió la columna "fecha" al formato de fecha, se crearon las columnas "fecha_año" y "fecha_mes" y se filtraron los datos según el rango de años seleccionado por el usuario. Luego, se mostró un gráfico de línea con la cantidad de accidentes por año, resaltando los tres años con mayor cantidad de accidentes.
+    - Se realizó un análisis de la cantidad de accidentes por año. Se convirtió la columna "fecha" al formato de fecha, se crearon las columnas "fecha_año" y "fecha_mes" y se filtraron los datos según el rango de años seleccionado por el usuario. Luego, se mostró un gráfico de línea con la cantidad de accidentes por año, resaltando los tres años con mayor cantidad de accidentes.
     - Se realizó un análisis de la cantidad de accidentes vs. muertos. Se creó una tabla dinámica con los datos filtrados y se mostró un gráfico de líneas con las cantidades de accidentes y muertos por año.
     - Se realizó un análisis de la cantidad de accidentes por mes y tipo de aeronave. Se filtraron los datos por la clasificación de aeronaves y se creó un gráfico de barras apiladas para mostrar la cantidad de accidentes por mes y tipo de aeronave.
     - Se realizó un análisis de la cantidad de accidentes por mes y continente. Se filtraron los datos por continente y se creó un gráfico de barras apiladas para mostrar la cantidad de accidentes por mes y continente.
