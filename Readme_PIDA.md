@@ -15,9 +15,9 @@ Para lograr esto, realizaremos un análisis exploratorio de los datos, donde exa
 ## **Propuesta de trabajo**
 Para este proyecto, se realizaron las siguientes actividades:
 
-## **Transformaciones** [link](xxxxxxxxxxxxxxxxxxxxxxx)
+## **Transformaciones** [link](https://github.com/LionelMc/PI_DA/blob/main/ETL.ipynb)
 Se realizaron las siguientes transformaciones a los datos:
-+ Se cambió el tipo de dato de la columna 'fecha' a formato de fecha y hora.
++ Se cambió el tipo de dato de la columna 'fecha', a formato de fecha y hora.
 + Se aplicaron varias funciones para limpiar y formatear la columna 'HORA declarada', eliminando prefijos, sufijos y caracteres no deseados, y convirtiendo los valores a formato de hora.
 + Se etiquetaron los valores '?' en la columna 'Ruta', 'OperadOR', 'flight_no', 'route', 'ac_type', 'registration', 'cn_ln' y 'summary' como 'NaN'.
 + Se cambió el tipo de dato de las columnas 'all_aboard', 'PASAJEROS A BORDO', 'crew_aboard', 'cantidad de fallecidos', 'passenger_fatalities', 'crew_fatalities' y 'ground' a entero, manejando los valores no numéricos.
@@ -27,7 +27,7 @@ Estas transformaciones tienen como objetivo preparar los datos para su análisis
 
 Cabe mencionar que el archivo adjunto en el link proporcionado contiene comentarios que explica cada sección y actividad realizada paso a paso.
 
-## **Análisis exploratorio de los datos** [link](xxxxxxxxxxxxxxxxxxxxxxxx)
+## **Análisis exploratorio de los datos** [link](https://github.com/LionelMc/PI_DA/blob/main/EDA.ipynb)
 Se realizon las siguientes actividades:
 + Importación de librerías: Se importan las librerías necesarias para el análisis de datos, incluyendo pandas, numpy, datetime, missingno, seaborn y matplotlib.pyplot.
 + Carga de datos: Se carga el archivo 'accidentes_etl.csv' en un DataFrame llamado 'df'.
@@ -53,33 +53,33 @@ Se realizon las siguientes actividades:
 
 Cabe mencionar que el archivo adjunto en el link proporcionado contiene comentarios que explica cada sección y actividad realizada paso a paso.
 
-## **Streamlit** [link](hxxxxxxxxxxxxxxxxx)
-+ **Visualizaciones:** [link](hxxxxxxxxxxxxxxxxx)
-        Los cambios desarrollados son los siguientes:
+## **Streamlit** [link](https://lionelmc-pi-da-app-k5zaj6.streamlit.app/KPI)
++ **[Visualizaciones:](https://github.com/LionelMc/PI_DA/blob/main/pages/01_%E2%9C%88%EF%B8%8F_Visualizacion.py)** 
+Los cambios desarrollados son los siguientes:
 
-        - Se importaron las bibliotecas necesarias: pandas, numpy, datetime, missingno, seaborn, matplotlib.pyplot, folium y streamlit_folium.
-        - Se cargó el DataFrame desde el archivo "accidentes_data.csv".
-        - Se añadió una sección para mostrar los datos del DataFrame. Se implementó una interfaz en Streamlit con botones para mostrar el encabezado, una muestra, la cola y la totalidad de los datos.
-        -Se realizó un análisis de la cantidad de accidentes por año. Se convirtió la columna "fecha" al formato de fecha, se crearon las columnas "fecha_año" y "fecha_mes" y se filtraron los datos según el rango de años seleccionado por el usuario. Luego, se mostró un gráfico de línea con la cantidad de accidentes por año, resaltando los tres años con mayor cantidad de accidentes.
-        - Se realizó un análisis de la cantidad de accidentes vs. muertos. Se creó una tabla dinámica con los datos filtrados y se mostró un gráfico de líneas con las cantidades de accidentes y muertos por año.
-        - Se realizó un análisis de la cantidad de accidentes por mes y tipo de aeronave. Se filtraron los datos por la clasificación de aeronaves y se creó un gráfico de barras apiladas para mostrar la cantidad de accidentes por mes y tipo de aeronave.
-        - Se realizó un análisis de la cantidad de accidentes por mes y continente. Se filtraron los datos por continente y se creó un gráfico de barras apiladas para mostrar la cantidad de accidentes por mes y continente.
-        - Se implementó una función para mostrar los accidentes registrados en un mapa. Se obtuvo la cantidad de accidentes por país y se creó un mapa de folium con marcadores proporcionales a la cantidad de accidentes por país.
+    - Se importaron las bibliotecas necesarias: pandas, numpy, datetime, missingno, seaborn, matplotlib.pyplot, folium y streamlit_folium.
+    - Se cargó el DataFrame desde el archivo "accidentes_data.csv".
+    - Se añadió una sección para mostrar los datos del DataFrame. Se implementó una interfaz en Streamlit con botones para mostrar el encabezado, una muestra, la cola y la totalidad de los datos.
+    -Se realizó un análisis de la cantidad de accidentes por año. Se convirtió la columna "fecha" al formato de fecha, se crearon las columnas "fecha_año" y "fecha_mes" y se filtraron los datos según el rango de años seleccionado por el usuario. Luego, se mostró un gráfico de línea con la cantidad de accidentes por año, resaltando los tres años con mayor cantidad de accidentes.
+    - Se realizó un análisis de la cantidad de accidentes vs. muertos. Se creó una tabla dinámica con los datos filtrados y se mostró un gráfico de líneas con las cantidades de accidentes y muertos por año.
+    - Se realizó un análisis de la cantidad de accidentes por mes y tipo de aeronave. Se filtraron los datos por la clasificación de aeronaves y se creó un gráfico de barras apiladas para mostrar la cantidad de accidentes por mes y tipo de aeronave.
+    - Se realizó un análisis de la cantidad de accidentes por mes y continente. Se filtraron los datos por continente y se creó un gráfico de barras apiladas para mostrar la cantidad de accidentes por mes y continente.
+    - Se implementó una función para mostrar los accidentes registrados en un mapa. Se obtuvo la cantidad de accidentes por país y se creó un mapa de folium con marcadores proporcionales a la cantidad de accidentes por país.
 
     Estos cambios permiten visualizar y analizar diferentes aspectos de los datos de accidentes de forma interactiva en la aplicación Streamlit.
 
-+ **KPI's:** [link](hxxxxxxxxxxxxxxxxx)
-        Se realizaron los siguientes cambios y actividades en el código:
++ **[KPI's:](https://github.com/LionelMc/PI_DA/blob/main/pages/02_%F0%9F%93%8A_KPI.py)**
+Se realizaron los siguientes cambios y actividades en el código:
 
-        - Se importó la biblioteca Streamlit para crear una aplicación web interactiva.
-        - Se importó la biblioteca pandas para el manejo de datos y matplotlib.pyplot para la generación de gráficos.
-        - Se utilizó la función st.markdown() para mostrar encabezados y separadores en formato Markdown.
-        - Se cargaron los datos del archivo "accidentes_data.csv" y se convirtió la columna "fecha" al tipo de dato fecha.
-        - Se agregó un control deslizante interactivo para seleccionar un rango de años.
-        - Se filtró el DataFrame original según el rango de años seleccionado.
-        - Se calculó el resumen anual de accidentes, cantidad de fallecidos, tasa de mortalidad, variación de la tasa de mortalidad, índice de supervivencia y promedio de fallecidos por accidente utilizando el DataFrame filtrado.
-        - Se crearon gráficos utilizando los datos resumidos para cada KPI (Promedio de Fallecidos, Índice de Supervivencia, Índice de mortalidad total, Reducción porcentual del índice de mortalidad).
-        - Se utilizó st.pyplot() para mostrar los gráficos generados en la aplicación web.
+    - Se importó la biblioteca Streamlit para crear una aplicación web interactiva.
+    - Se importó la biblioteca pandas para el manejo de datos y matplotlib.pyplot para la generación de gráficos.
+    - Se utilizó la función st.markdown() para mostrar encabezados y separadores en formato Markdown.
+    - Se cargaron los datos del archivo "accidentes_data.csv" y se convirtió la columna "fecha" al tipo de dato fecha.
+    - Se agregó un control deslizante interactivo para seleccionar un rango de años.
+    - Se filtró el DataFrame original según el rango de años seleccionado.
+    - Se calculó el resumen anual de accidentes, cantidad de fallecidos, tasa de mortalidad, variación de la tasa de mortalidad, índice de supervivencia y promedio de fallecidos por accidente utilizando el DataFrame filtrado.
+    - Se crearon gráficos utilizando los datos resumidos para cada KPI (Promedio de Fallecidos, Índice de Supervivencia, Índice de mortalidad total, Reducción porcentual del índice de mortalidad).
+    - Se utilizó st.pyplot() para mostrar los gráficos generados en la aplicación web.
 
     Estos cambios permiten visualizar los KPIs de manera interactiva y presentar los resultados de forma más atractiva.
 
