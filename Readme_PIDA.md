@@ -54,7 +54,7 @@ Se realizon las siguientes actividades:
 Cabe mencionar que el archivo adjunto en el link proporcionado contiene comentarios que explica cada sección y actividad realizada paso a paso.
 
 ## **Streamlit** [link](https://lionelmc-pi-da-app-k5zaj6.streamlit.app/KPI)
-+ **[Visualizaciones:](https://github.com/LionelMc/PI_DA/blob/main/pages/01_%E2%9C%88%EF%B8%8F_Visualizacion.py)** 
++ **[Visualizaciones:](https://github.com/LionelMc/PI_DA/blob/main/pages/01_%E2%9C%88%EF%B8%8F_Visualizacion.py)**
 Los cambios desarrollados son los siguientes:
 
     - Se importaron las bibliotecas necesarias: pandas, numpy, datetime, missingno, seaborn, matplotlib.pyplot, folium y streamlit_folium.
